@@ -148,15 +148,18 @@ function App() {
           </button>
         </header>
 
+        {/* 검색창(서치바) */}
         <SearchBar onSearch={handleSearch} isLoading={loading} />
         <ErrorMessage message={error} />
 
+        {/* 로딩 스피너 */}
         {loading && !weather && (
           <div className="flex justify-center my-10">
             <div className="animate-spin rounded-full h-12 w-12 border-4 border-white border-t-transparent"></div>
           </div>
         )}
 
+        {/* 현재 날씨 */}
         {weather && (
           <div className="animate-slideUp">
             <CurrentWeather 
@@ -164,6 +167,7 @@ function App() {
               unit={unit} 
             />
             
+            {/* 5일 예보 */}
             <div className="mt-8">
               <h3 className="text-xl text-white font-semibold mb-4 ml-2">5일 예보</h3>
               <div className="flex overflow-x-auto pb-4 gap-4 scrollbar-hide">
