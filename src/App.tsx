@@ -37,7 +37,7 @@ function App() {
 
     try {
       // 1. Get Coordinates & Korean Name via Geocoding API
-      const geoRes = await axios.get(`http://api.openweathermap.org/geo/1.0/direct`, {
+      const geoRes = await axios.get(`https://api.openweathermap.org/geo/1.0/direct`, {
         params: {
           q: searchCity,
           limit: 1,
